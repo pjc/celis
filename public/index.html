@@ -1,241 +1,333 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KO CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Rafael de Mello">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/extras.css" rel="stylesheet">
+</head>
+<body>
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
+	<div class="options">
+    <a href="#" class="tooltip-test" onclick="javascript:window.print();" data-original-title="Print CV"><img src="img/print.png" border="0"></a>
+    <a href="#" class="tooltip-test" data-original-title="Download"><img src="img/download.png"></a>
+	</div>
 
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
+  <div class="container well">
+    <div class="row">
+      <div class="span12">
+        <div id="photo"><img src="img/pjc.png" width="186px">
+        </div>
+        <div id="data">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><h3>Name</h3></td>
+                <td>Peter-Jan Celis</td>
+              </tr>
+              <tr>
+                <td><h3>Birth</h3></td>
+                <td>January 17, 1986</td>
+              </tr>
+              <tr>
+                <td><h3>City</h3></td>
+                <td>Leuven, Belgium</td>
+              </tr>
+              <tr>
+                <td><h3>Phone</h3></td>
+                <td>+32 484 53 44 19</td>
+              </tr>
+              <tr>
+                <td><h3>Mail</h3></td>
+                <td>pj@celis.org</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="social">
+          <a href="http://www.facebook.com/peterjancelis" class="tooltip-test" data-original-title="Facebook"><img src="img/facebook.png"></a>
+          <a href="https://plus.google.com/102581287586158495776/posts" class="tooltip-test" data-original-title="Google +"><img src="img/googleplus.png"></a>
+          <a href="https://twitter.com/celispj" class="tooltip-test" data-original-title="Twitter"><img src="img/twitter.png"></a>
+          <a href="http://www.youtube.com/user/PJCelis" class="tooltip-test" data-original-title="Youtube"><img src="img/youtube.png"></a>
+          <a href="http://www.github.com/pjc" class="tooltip-test" data-original-title="Github"><img src="img/github.png"></a>
+          <a href="http://www.linkedin.com/in/peterjancelis" class="tooltip-test" data-original-title="LinkedIn"><img src="img/linkedin.png"></a>
+          <a href="http://www.reddit.com/user/pjcelis" class="tooltip-test" data-original-title="Reddit"><img src="img/reddit.png"></a>
+          <a href="http://blog.celis.org" class="tooltip-test" data-original-title="Tumblr"><img src="img/tumblr.png"></a>
+          <a href="mailto:pj@celis.org?Subject=I want to hire you" class="tooltip-test" data-original-title="Gmail"><img src="img/gmail.png"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="container well">
+    <div class="row">
+      <div class="span12">
+        <h1>I am a Ruby on Rails developer with a <a href="http://blog.celis.org">blog</a> and a <a href="http://judge.me">mission</a>. You can <a href="hireme.html">hire me</a> or contact me anytime.</h1>
+      </div>
+    </div>
+  </div>
+    
+  <div class="container well">
 
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("assets/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-      .filename {
-        font-style: italic;
-      }
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
-            </ul>
-          </li>
+  	<div class="row">
+      <div class="span4">
+        <h2>Professional profile</h2>
+      </div>
+      <div class="span8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in mi justo. Duis eu lectus turpis. Sed a tortor lacus. Nam nec ultricies nunc. Aliquam porta, elit ac condimentum pretium, sapien quam tempor augue, a placerat enim diam interdum leo. Mauris metus metus, sollicitudin eu tincidunt eget, imperdiet dapibus quam.</p>
+        <ul>
+          <li>Vivamus congue massa et diam ullamcorper ultricies.</li>
+          <li>Quisque lobortis feugiat ipsum, lacinia sagittis augue consectetur at.</li>
+          <li>Vestibulum pharetra nisl eros, vel iaculis justo.</li>
         </ul>
       </div>
+    </div>
+    
+    <hr>
 
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
+    <div class="row">
+    	<div class="span4">
+        <h2>Work experience</h2>
+      </div>
+      <div class="span8">
+
+        <div class="row">
+          <div class="span4">
+            <h3>Ruby on Rails Developer</h3>
+            <h6>Independent consultant</h6>
+        	  <p style="margin-top:20px;"><strong>Period: </strong> June 2012 - Present day</p>
+            <p><strong>Reference: </strong>Raghu Betina (Starter League instructor)</p>
+          </div>
+          <div class="span4">
+            <p>I currently work full time on client projects as well as my own startup judge.me. Specific project experience includes:</p>
+        	  <ul>
+            	<li>Building a minimum viable product in less than 2 weeks.</li>
+              <li>Optimizing viral loop via segmented and automated mailers.</li>
+              <li>Lowering long term TCO by adding tests to existing project.</li>
+              <li>Search Engine Optimization resulting in top 2 spot on Google.</li>
+            </ul>
+          </div>
         </div>
 
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
+				<hr>
+
+        <div class="row">
+          <div class="span4">
+            <h3>Founder Judge.me</h3>
+            <h6>Startup Chile</h6>
+            <p style="margin-top:20px;"><strong>Period: </strong> November 2011 - May 2012</p>
+            <p><strong>Reference: </strong>Judge.me</p>
+          </div>
+          <div class="span4">
+            <p>Late 2011 I was selected for the winter 2011 batch of Startup Chile, a Chilean startup incubator program that offers $40K USD in grant funding for early stage entrepreneurs who want to start their company in Chile.</p>
+            <p>I launched judge.me on January 17 of 2012.</p>
+          </div>
         </div>
 
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
+        <hr>
 
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
-            </li>
-          </ol>
+        <div class="row">
+          <div class="span4">
+            <h3>Business Consultant</h3>
+            <h6>Independent consultant</h6>
+            <p style="margin-top:20px;"><strong>Period: </strong> July 2009 - October 2011</p>
+            <p><strong>Reference: </strong>Andy Nguyen (founder QuantNet.com)</p>
+          </div>
+          <div class="span4">
+            <p>In early 2009 I got obsessed with private law and I spent a lot of time reading material from various perspectives, from Murray Rothbard (Austrian school) over David Friedman (Chicago school) to Francis Heylighen (Cybernetics).</p>
+            <p>I paid the bills with some business consulting on the side. My biggest client was QuantNet, the NYC based quant community.</p>
+          </div>
         </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="span4">
+            <h3>Associate</h3>
+            <h6>The Boston Consulting Group</h6>
+            <p style="margin-top:20px;"><strong>Period: </strong> October 2008 - June 2009</p>
+            <p><strong>Reference: </strong>Peter Adams (partner BCG)</p>
+          </div>
+          <div class="span4">
+            <p>The Boston Consulting Group is a leading strategy advisor. I worked in the Brussels office and spent most of my time working in financial services.</p>
+            <p>I left because the bank bailout project I had to work on kept on being delayed and I did not agree with the government policy.</p>
+          </div>
+        </div>
+
+        <hr>    
+
+				<div class="row">
+          <div class="span4">
+            <h3>Tutor</h3>
+            <h6>Catherine D'Hondt tutoring company</h6>
+            <p style="margin-top:20px;"><strong>Period: </strong> February 2006 - February 2008</p>
+            <p><strong>Reference: </strong>Catherine D'Hondt (company owner)</p>
+          </div>
+          <div class="span4">
+            <p>During my university years I tutored over 30 students in total, mostly small groups of 3 to 5 law students. I taught the following:</p>
+            <ul>
+              <li>Finance</li>
+              <li>Economics.</li>
+              <li>Production & Logistics</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr>    
+
+        <div class="row">
+          <div class="span4">
+            <h3>Visiting Associate</h3>
+            <h6>The Boston Consulting Group</h6>
+            <p style="margin-top:20px;"><strong>Period: </strong> July 2007 - August 2007</p>
+            <p><strong>Reference: </strong>Peter Adams (partner BCG)</p>
+          </div>
+          <div class="span4">
+            <p>After qualifying for the finals of the BCG Strategy Cup, a student strategy competition, I was selected for an 8 week summer internship in the Brussels office of the Boston Consulting Group.</p>
+            <p>My performance resulted in a full time offer.</p>
+          </div>
+        </div>
+
+      </div>
+            
+    </div>
+    
+    <hr>
+        
+    <div class="row">
+      <div class="span4">
+        <h2>Education</h2>
+      </div>
+      <div class="span8">
+        <h3>Starter League - formerly Code Academy (Chicago)</h3>
+        <h6>Web Development and Advanced HTML & CSS</h6>
+        <p>In the summer of 2012, right after Startup Chile, I enrolled in the 11 week Ruby on Rails course at Starter League, then still known as Code Academy. Starter League is the code school 37Signals invested in. A recommendation letter from Starter League instructor Raghu Betina is available upon request.</p>
+
+        <hr>
+
+        <h3>KULeuven - Catholic University of Leuven (Belgium)</h3>
+        <h6>Master in Applied Economics (Business)</h6>
+        <p>In the period 2004-2008, I studied Applied Economics in Leuven, Belgium. In my bachelor I majored in finance and strategy and graduated magna cum laude, in my master I majored in business research and strategy and graduated cum laude.</p>
+
+        <hr>
+
+        <h3>City U - City University of Hong Kong</h3>
+        <h6>Socrates student exchange</h6>
+        <p>In the fall of 2006, I was selected to participate in a 6 month Socrates student exchange to the City University of Hong Kong. I traveled Asia extensively and visited Belgian entrepreneurs all over the continent.</p>
       </div>
 
-      <div id="footer">&nbsp;</div>
     </div>
-  </body>
+        
+    <hr>
+        
+    <div class="row">
+      <div class="span4">
+        <h2>Technical skill</h2>
+      </div>
+      <div class="span8">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2"><h3>Programming</h3></th>
+              <th colspan="2"><h3>Design</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td width="25%">Ruby</td>
+              <td width="25%">
+                <div class="progress progress-info">
+    						  <div class="bar" style="width: 80%;"></div>
+                </div>
+              </td>
+          		<td width="25%">Twitter Bootstrap</td>
+          		<td width="25%">
+                <div class="progress progress-info">
+					        <div class="bar" style="width: 80%;"></div>
+          		  </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td width="25%">Rails</td>
+              <td width="25%">
+                <div class="progress progress-info">
+  				        <div class="bar" style="width: 80%;"></div>
+          			</div>
+              </td>
+        		  <td width="25%">Zurb Foundation</td>
+        		  <td width="25%">
+                <div class="progress progress-info">
+				          <div class="bar" style="width: 70%;"></div>
+        			  </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td width="25%">Git & Github</td>
+              <td width="25%">
+                <div class="progress progress-info">
+  				        <div class="bar" style="width: 70%;"></div>
+          			</div>
+              </td>
+          		<td width="25%">HTML 5 / Haml</td>
+          		<td width="25%">
+                <div class="progress progress-info">
+  							  <div class="bar" style="width: 70%;"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td width="25%">Rspec & Capybara</td>
+              <td width="25%">
+                <div class="progress progress-info">
+  				        <div class="bar" style="width: 60%;"></div>
+          			</div>
+              </td>
+              <td width="25%">CSS 3 / Sass</td>
+              <td width="25%">
+                <div class="progress progress-info">
+                  <div class="bar" style="width: 60%;"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td width="25%">Heroku</td>
+              <td width="25%">
+                <div class="progress progress-info">
+                  <div class="bar" style="width: 60%;"></div>
+                </div>
+              </td>
+              <td width="25%">Javascript / Coffeescript</td>
+              <td width="25%">
+                <div class="progress progress-info">
+                  <div class="bar" style="width: 20%;"></div>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>       
+  </div>
+    
+    
+<!-- JAVASCRIPT INSERTS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-prettify.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
+</body>
 </html>
